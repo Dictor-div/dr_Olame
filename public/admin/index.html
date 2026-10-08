@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | Dictor Olame</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <!-- Login screen -->
+  <section id="login-view" class="login-wrap" hidden>
+    <form id="login-form" class="login-card">
+      <h1>Admin login</h1>
+      <p class="hint">First run? Use <code id="default-email"></code> and the default password from the README, then change it under Account.</p>
+      <label>Email<input type="email" name="email" required autocomplete="username"></label>
+      <label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p class="msg" id="login-msg" role="alert"></p>
+      <a href="/">&larr; Back to website</a>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <div id="dash-view" class="dash" hidden>
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav id="tabs">
+        <button data-tab="settings" class="active"><i class="fa-solid fa-gear"></i> Settings</button>
+        <button data-tab="about"><i class="fa-solid fa-file-lines"></i> About page</button>
+        <button data-tab="metrics"><i class="fa-solid fa-chart-simple"></i> Metrics</button>
+        <button data-tab="projects"><i class="fa-solid fa-diagram-project"></i> Projects</button>
+        <button data-tab="services"><i class="fa-solid fa-briefcase"></i> Services</button>
+        <button data-tab="whyhire"><i class="fa-solid fa-thumbs-up"></i> Why hire me</button>
+        <button data-tab="messages"><i class="fa-solid fa-inbox"></i> Messages</button>
+        <button data-tab="account"><i class="fa-solid fa-user-shield"></i> Account</button>
+      </nav>
+      <div class="sidebar-foot">
+        <a href="/" target="_blank">View site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <button id="logout" class="btn ghost">Log out</button>
+      </div>
+    </aside>
+    <main class="panel" id="panel"></main>
+  </div>
+
+  <div id="toast" role="status"></div>
+  <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "dictor-olame-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website and admin dashboard for Dictor Abdalla Olame (Express + vanilla JS, browser localStorage data layer).",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
